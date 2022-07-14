@@ -3,7 +3,6 @@ from .models import Booking
 
 
 @admin.register(Booking)
-
 class BookingAdmin(admin.ModelAdmin):
 
     list_display = ('booked_date', 'booked_time', 'name', 'party_size', 'approved')
@@ -13,3 +12,4 @@ class BookingAdmin(admin.ModelAdmin):
 
     def approve_booking(self, request, queryset):
         queryset.update(approved=True)
+        
