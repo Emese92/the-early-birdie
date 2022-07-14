@@ -1,0 +1,20 @@
+body {
+    background-color: #fff;
+}
+
+.navbar-brand {
+    font-family: Raleway, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: fff;
+}
+
+.nav-link {
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+}
+
+.footer{
+    font-size: 1.7rem;
+}
+
