@@ -10,11 +10,14 @@ class MenuTemplateView(TemplateView):
     template_name = 'menu.html'
 
 
-# class BookingList(generic.ListView):
-#     model = Booking
-#     queryset = Booking.objects.order_by('-booked_date') 
-#     template_name = 'bookings.html'
-#     paginate_by = 20
+class BookingList(generic.ListView):
+        model = Booking
+        template_name = 'bookings.html'
+        def get_bookings(self, **kwargs):
+            context = super().get_bookings(**kwargs)
+            context['booking_list'] = Booking.objects.all()
+            return context
+
 
 
 # class BookingDetail(View):

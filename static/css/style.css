@@ -27,7 +27,7 @@ body {
 }
 
 
- /* Style for index.html */
+/* Style for index.html */
 
 .container {
     width: 100%;
@@ -75,6 +75,8 @@ body {
 }
 
 
+
+
 /* Style for menu.html  */
 .ml-auto {
     margin-left: auto !important;
@@ -85,6 +87,10 @@ body {
     border: 6px double black;
     padding: 25px;
     border-radius: 8px;
+}
+
+.list-unstyled-item {
+    text-align: left;
 }
 
 /* Mobile navbar */
