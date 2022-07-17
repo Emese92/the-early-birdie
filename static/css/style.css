@@ -20,32 +20,24 @@ body {
     font-size: 1.7rem;
 }
 
-.container{
+.container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+
 .intro-img {
     width: 75%;
     transform: rotate(-90deg);
     right: 100px;
 }
 
-.intro .intro-text {
-    background-color: rgba(56, 56, 56, 0.911);
-    box-sizing: border-box;
-    color: #fff;
+.intro-text {
     font-weight: lighter;
-    display: block;
-    border-radius: 4px;
-    height: 400px;
-    line-height: 24px;
-    text-align: center;
-    padding: 48px;
-}
-.intro-text{
+    color: #fff;
+    background-color: rgba(56, 56, 56, 0.911);
     width: 45%;
     margin-top: 350px;
     top: 50px;
@@ -74,9 +66,10 @@ body {
 }
 
 .ml-auto {
-    margin-left: auto!important;
+    margin-left: auto !important;
 }
-.cta-inner{
+
+.cta-inner {
     margin-top: 70px;
     border: 6px double black;
     padding: 25px;
@@ -84,33 +77,20 @@ body {
 }
 
 
-/* @media only screen and (max-width: 1200px) {
-    .intro .intro-text{
-        font-size: 1rem;
-        width: 65%;
-    }
-}
 
-@media only screen and (max-width: 990px) {
-
-    .img-fluid,
-    .float-end,
-    .intro,
-    .intro-text{
+@media screen and (max-width: 992px) {
+    .intro-text {
+        float: none;
         width: 100%;
-        height: auto;
-        display: block;
-        align-items: center;
+        top: auto;
+        left: auto;
+        position: relative;
+        margin-top: 5px;
     }
 
-}
-/* @media only screen and (max-width: 768px) {
-    .intro,.intro-text, .img-fluid {
+    .intro-img {
+        float: none;
         width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display:block;
-      }
-} */ 
+        right: auto;
+    }
+}
