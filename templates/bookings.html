@@ -1,21 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div>
+    <h2 class="section-heading mb-2 text-center"><span class="section-heading-upper">Bookings</span></h2>
+    <table class="table table-striped table-light">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date</th>
+                <th scope="col">Time</th>
+                <th scope="col">Party Size</th>
+                <th scope="col">Confirmed</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in booking_list %}
+            <tr>
 
-<div class="container-fluid">
-    <div class="row">
+                <td>{{ booking.name }}</td>
+                <td>{{ booking.booked_date }}</td>
+                <td>{{ booking.booked_time }}</td>
+                <td>{{ booking.party_size }} </td>
+                <td>{{ booking.approved }} </td>
 
-        
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for booking in booking_list %}
-                {{ booking.name }}
-                {%endfor %}
-
-            </div>
-        </div>
-    </div>
-
+            </tr>
+            {%endfor %}
+        </tbody>
+    </table>
 </div>
+
 
 {%endblock%}
