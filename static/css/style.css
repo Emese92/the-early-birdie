@@ -3,7 +3,9 @@ body {
     font-family: Lora, sans-serif;
     font-size: 25px;
 }
-h1, h2 {
+
+h1,
+h2 {
     text-transform: uppercase;
     font-family: Raleway, sans-serif;
     font-size: 2.5rem;
@@ -13,7 +15,7 @@ h1, h2 {
 
 .mobile-container {
     display: none;
-    
+
 }
 
 .navbar-brand {
@@ -27,7 +29,6 @@ h1, h2 {
     font-family: Raleway, sans-serif;
     font-weight: 700;
 }
-
 
 .footer {
     font-size: 1.7rem;
@@ -82,8 +83,6 @@ h1, h2 {
 }
 
 
-
-
 /* Style for menu.html  */
 .ml-auto {
     margin-left: auto !important;
@@ -100,6 +99,7 @@ h1, h2 {
     text-align: left;
 }
 
+
 /* Mobile navbar */
 
 .topnav {
@@ -109,11 +109,9 @@ h1, h2 {
     position: relative;
 }
 
-
 .topnav #myLinks {
     display: none;
 }
-
 
 .topnav a {
     color: white;
@@ -136,14 +134,14 @@ h1, h2 {
     color: black;
 }
 
+
 /* Bookings List view */
-
-
 
 .hidden_row {
     display: none;
 
 }
+
 
 /* Media queries for small screens */
 @media screen and (max-width: 992px) {

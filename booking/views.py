@@ -22,20 +22,6 @@ class BookingList(generic.ListView):
 class AddBooking(generic.ListView):
     model = Booking
     template_name = 'add_new_booking.html'
-    Booking.objects.values()
-    def get(self,request):
-        return render(request, 'add_new_booking.html', {
-        'form': BookingForm(),
-    })
-
-
-
-        # def get_bookings(self, **kwargs):
-        #     context = super().get_bookings(**kwargs)
-        #     context['booking_list'] = Booking.objects.all()
-        #     return context
-        # def get_queryset(self):
-        #     self.booking = get_object_or_404(Booking, name=self.kwargs['booking'])
-        #     return Booking.objects.filter(booking=self.booking)
-
+    def get(self, request):
+        return render(request, 'add_new_booking.html', {'form': BookingForm(),})
 
