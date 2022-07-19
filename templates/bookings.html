@@ -15,14 +15,19 @@
         </thead>
         <tbody>
             {% for booking in booking_list %}
-            <tr>
+            <tr onclick="showHideRow('hidden_row');">
 
                 <td>{{ booking.name }}</td>
                 <td>{{ booking.booked_date }}</td>
                 <td>{{ booking.booked_time }}</td>
                 <td>{{ booking.party_size }} </td>
-                <td>{{ booking.approved }} </td>
+                <td>{{ booking.approved }}</td>
 
+            </tr>
+            <tr id="hidden_row" class="hidden_row">
+                <td>Booked on date: {{ booking.booked_on }}</td>
+                <td>Account: {{ booking.account }}</td>
+                <td>Extra info: {{ booking.extra_info }}</td>
             </tr>
             {%endfor %}
         </tbody>

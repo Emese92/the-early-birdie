@@ -129,7 +129,14 @@ body {
     color: black;
 }
 
+/* Bookings List view */
 
+
+
+.hidden_row {
+    display: none;
+
+}
 
 /* Media queries for small screens */
 @media screen and (max-width: 992px) {

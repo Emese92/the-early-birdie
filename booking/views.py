@@ -7,6 +7,7 @@ from django.views.generic.base import TemplateView
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
 
+
 class MenuTemplateView(TemplateView):
     template_name = 'menu.html'
 
@@ -15,6 +16,8 @@ class BookingList(generic.ListView):
         model = Booking
         template_name = 'bookings.html'
         Booking.objects.values()
+
+
 
         # def get_bookings(self, **kwargs):
         #     context = super().get_bookings(**kwargs)
