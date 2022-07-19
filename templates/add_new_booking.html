@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% load crispy_forms_tags %}
+{% if user.is_authenticated %}
+<div class="card-body">
+    <h1>Add a new Booking</h1>
+    <form method="post" style="margin-top: 1.3em;">
+        {{ form | crispy }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-signup -bt-lg">Book</button>
+
+
+    </form>
+</div>
+{% endif %}
+{% endblock content %}

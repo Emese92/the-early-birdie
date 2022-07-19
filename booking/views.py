@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Booking
 from django.views.generic.base import TemplateView
+from .forms import BookingForm 
 
 
 class HomeTemplateView(TemplateView):
@@ -13,9 +14,19 @@ class MenuTemplateView(TemplateView):
 
 
 class BookingList(generic.ListView):
-        model = Booking
-        template_name = 'bookings.html'
-        Booking.objects.values()
+    model = Booking
+    template_name = 'bookings.html'
+    Booking.objects.values()
+
+
+class AddBooking(generic.ListView):
+    model = Booking
+    template_name = 'add_new_booking.html'
+    Booking.objects.values()
+    def get(self,request):
+        return render(request, 'add_new_booking.html', {
+        'form': BookingForm(),
+    })
 
 
 
@@ -28,9 +39,3 @@ class BookingList(generic.ListView):
         #     return Booking.objects.filter(booking=self.booking)
 
 
-
-# class BookingDetail(View):
-#     def get(self, request, slug, *args, **kwargs):
-#         quesryset = Booking.objects.all()
-#         booking = get_object_or_404(quesryset, slug=slug)
-#         template_name = "booking_detail.html"
