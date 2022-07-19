@@ -11,6 +11,15 @@ function menuFunction() {
 
 // Credit to https://www.geeksforgeeks.org/how-to-make-html-table-expand-on-click-using-javascript/?fbclid=IwAR1hVkf9KzZjewn6agXULtWcXnuknO4pAtlW11MqNG2FVz4O6JVx_SdzHvA 
 
-function showHideRow(row) {
-    $("#" + row).toggle();
-}
+// function showHideRow(row) {
+//     $("#" + row).toggle();
+// }
+
+function showHideRow(hidden_row) {
+    var x = document.getElementById(hidden_row);
+    if (x.style.display === 'none') {
+      x.style.display = 'table-row';
+    } else {
+      x.style.display = 'none';
+    }
+  }

@@ -7,4 +7,5 @@ urlpatterns = [
     path('menu/', MenuTemplateView.as_view(), name='menu'),
     path('bookings/', views.BookingList.as_view(), name='bookings'),
     path('add_new_booking/', AddBooking.as_view(), name='add_new_booking'),
+
 ]
