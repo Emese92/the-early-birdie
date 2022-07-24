@@ -20,7 +20,7 @@
                 <a class="btn btn-dark d-inline-block mx-auto" role="button" href="{% url 'add_new_booking' %}">Book a
                     table</a>
                 {% else %}
-                <a class="btn btn-dark d-inline-block mx-auto" role="button" href="#">Log
+                <a class="btn btn-dark d-inline-block mx-auto" role="button" href="{% url 'account_login' %}">Log
                     in to book a table</a>
             </div>
             {% endif %}

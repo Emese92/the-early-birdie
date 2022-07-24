@@ -71,14 +71,14 @@
                     <a class="nav-link text-white" href="{% url 'bookings' %}">My Bookings</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Logout</a>
+                    <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Register</a>
+                    <a class="nav-link text-white" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Login</a>
+                    <a class="nav-link text-white" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
 

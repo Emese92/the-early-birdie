@@ -20,9 +20,15 @@
                 <td>{{ booking.booked_date }}</td>
                 <td>{{ booking.booked_time }}</td>
                 <td>{{ booking.party_size }}</td>
-                <td>{{ booking.approved }}</td>
+                <td>
+                    {% if booking.approved == True %}
+                    <span><i class="fas fa-check-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
+                    {% else %}
+                    <span><i class="fas fa-times-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
+                    {% endif %}
+                </td>
             </tr>
-            <tr id="hidden_row_-{{ forloop.counter }}" class="hidden_row" >
+            <tr id="hidden_row_-{{ forloop.counter }}" class="hidden_row">
                 <td>Booked on date: {{ booking.booked_on }}</td>
                 <td>Account: {{ booking.account }}</td>
                 <td>Extra info: {{ booking.extra_info }}</td>
@@ -32,7 +38,7 @@
             {%endfor %}
         </tbody>
     </table>
-    <a class="btn btn-dark d-inline-block mx-auto" role="button" href="{% url 'add_new_booking' %}">Book a table</a>
+    <a class="btn btn-dark d-inline-block mx-auto text-center" role="button" href="{% url 'add_new_booking' %}">Book a table</a>
 
 </div>
 
