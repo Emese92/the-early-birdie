@@ -141,6 +141,14 @@ h2 {
     display: none;
 }
 
+.book-btn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+}
 
 /* Media queries for small screens */
 @media screen and (max-width: 992px) {

@@ -15,6 +15,7 @@
         </thead>
         <tbody>
             {% for booking in booking_list %}
+
             <tr onclick="showHideRow('hidden_row_-{{ forloop.counter }}');">
                 <td>{{ booking.name }}</td>
                 <td>{{ booking.booked_date }}</td>
@@ -35,10 +36,13 @@
                 <td><a class="btn btn-dark d-inline-block mx-auto p-2" role="button" href="#">Edit</a></td>
                 <td><a class="btn btn-dark d-inline-block mx-auto p-2" role="button" href="#">Delete</a></td>
             </tr>
+
             {%endfor %}
+            
         </tbody>
     </table>
-    <a class="btn btn-dark d-inline-block mx-auto text-center" role="button" href="{% url 'add_new_booking' %}">Book a table</a>
+    <a class="btn btn-dark mx-auto book-btn" role="button" href="{% url 'add_new_booking' %}">Book a
+        table</a>
 
 </div>
 

@@ -8,7 +8,7 @@
     <form method="POST" action="{url 'book' }" style="margin-top: 1.3em;">
         {{ form | crispy }}
         {% csrf_token %}
-        <button type="submit" class="btn btn-signup -bt-lg">Book</button>
+        <button type="submit" class="btn btn-signup btn-dark book-btn">Book</button>
     </form>
 </div>
 {% endif %}
