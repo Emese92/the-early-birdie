@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+{% block content %}
+
+<section class="text-start">
+
+  <div class="card mb-3">
+    <div class="row g-0 d-flex align-items-center">
+      <div class="col-lg-4 d-none d-lg-flex">
+        <img src="{% static 'images/pexels-daniela-constantini-5591663.jpg' %}" alt="Picture of a breakfast dish"
+          class="w-100 t-5 tr-lg-0 bl-lg-5" />
+      </div>
+      <div class="col-lg-8">
+        <div class="card-body py-5 px-md-5">
+          <h3>{% trans "Sign In" %}</h3>
+          <p>{% blocktrans %}If you don't have an account yet please <a class="link" href="{{ signup_url }}">sign up</a>
+            here.
+            {% endblocktrans %}</p>
+
+          <form class="login" method="POST" action="{% url 'account_login' %}">
+            <div class="form-outline mb-4">
+              {% csrf_token %}
+              {{ form.as_p }}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+
+            </div>
+            <button class="btn btn-dark d-inline-block book-btn mb-4" type="submit">{% trans "Sign In" %}</button>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
