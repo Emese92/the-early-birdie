@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 {% load crispy_forms_tags %}
 {% if user.is_authenticated %}
-<div class="card-body">
-    <h1>Add a new Booking</h1>
-    <form method="POST" action="{url 'book' }" style="margin-top: 1.3em;">
-        {{ form | crispy }}
-        {% csrf_token %}
-        <button type="submit" class="btn btn-signup btn-dark book-btn">Book</button>
-    </form>
+
+<div class="card mb-3" >
+    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+        
+        <div class="">
+            <div class="card-body">
+                <h1 class="card-title">Add a new Booking</h1>
+                <form method="POST" action="{url 'book' }" style="margin-top: 1.3em;width:30rem;">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-dark" style="width:30rem;">Book</button>
+                </form>
+            </div>
+           
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+            <img src="/static/images/pexels-daniela-constantini-5591662.jpg" alt="Picture of breakfast" style="margin-top: 1.3em;width: 30rem;object-fit: cover;">
+        </div>
+    </div>
 </div>
 {% endif %}
 {% endblock content %}

@@ -3,7 +3,8 @@ from django import forms
 import datetime as dt
 
 
-TIME_CHOICES = [(i, dt.time(i).strftime('%I:%M %p')) for i in range(11)]
+TIME_CHOICES = [(i, dt.time(i).strftime('%I:%M %p')) for i in range(6,11)]
+PARTY_SIZE = [(i,i) for i in range(1,11)]
 
 class BookingForm(forms.ModelForm):
     class Meta:
@@ -15,15 +16,13 @@ class BookingForm(forms.ModelForm):
             'party_size',
             'extra_info',
         ]
+        help_texts = {'extra-info': "Food allergies, dietary requirements, special occasions"}
         widgets = {
             'booked_date': forms.DateInput(
                 format=("%d-%m-%Y"),
-                attrs={'class': 'form-control',
-                       'placeholder': 'Select a date',
-                       'type': 'date'
-                }),
+                attrs={'type': 'date'}),
             'booked_time': forms.Select(choices=TIME_CHOICES),
-            
+            'party_size': forms.Select(choices=PARTY_SIZE),  
         }
 
 
