@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% if confirmed %}
+<div class="alert alert-success" role="alert">
+    Your booking has been confirmed.
+</div>
+{% endif %}
 <div>
     <h2 class="mb-2">Bookings</h2>
     <table class="table table-striped table-light">
