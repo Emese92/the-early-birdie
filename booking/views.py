@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from django.views.generic.edit import CreateView, FormView, UpdateView
+from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
 from .models import Booking
 from django.views.generic.base import TemplateView
 from .forms import BookingForm 
@@ -49,11 +49,11 @@ def editBooking(request, pk=None):
     form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
     if form.is_valid():
         instance = form.save(commit=False)
-        instance.save()
-        messages.success(request, "Post updated") 
-        return HttpResponseRedirect('bookings.html')
+        instance.save() 
         form.instance.account = request.user
         form.save()
+        messages.success(request, "Booking updated") 
+        return redirect('bookings')
 
     context = {"form": form, "booked": True, "confirmed": False, "deleted": False,}
     template = 'edit_booking.html'
@@ -61,11 +61,12 @@ def editBooking(request, pk=None):
 
 
 
-def deleteBooking(request, pk=None):
+def deleteBooking(request, pk):
 
-    booking = get_object_or_404(Booking, pk=pk)
-    booking.delete()
-    messages.success(request, "Booking Deleted")
-    context = {"deleted": True,}
-    return render(request, "delete.html", context)
+    booking = Booking.objects.get(pk=pk)
+    if request.method == 'POST':
+        booking.delete()
+        return redirect('/bookings')
+        messages.success(request, 'Your booking has been deleted')
+    return render(request, "delete.html")
 

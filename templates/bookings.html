@@ -1,16 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% if confirmed %}
-<div class="alert alert-success" role="alert">
-    Your booking has been confirmed.
+{for message in messages}
+{% if message %}
+<div class="alert alert-{{ message.tags }}" role="alert">
+   {{ message }}
 </div>
+
 {% endif %}
-{% if deleted %}
-<div class="alert alert-success" role="alert">
-    Your booking has been deleted.
-</div>
-{% endif %}
+{% endfor %}
 
 
 <div>

@@ -13,11 +13,11 @@
             <div class="card-body">
                 <h1 class="card-title">Delete Booking</h1>
                 <p>Are you sure you want to delete your booking?</p>
-                <form method="POST" action="#" style="margin-top: 1.3em;width:30rem;">
+                <form method="POST" action="" style="margin-top: 1.3em;width:30rem;">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <a href="{% url 'bookings' %}"   type="submit" class="btn btn-signup btn-dark"
-                        style="width:30rem;">Delete</a>
+                    <input type="submit" class="btn btn-signup btn-dark"
+                        style="width:30rem;" value="Delete" />
                 </form>
                 <a href="{% url 'bookings' %}" class="btn btn-signup btn-dark" style="width:30rem;">Cancel</a>
             </div>
