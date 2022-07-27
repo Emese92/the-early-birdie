@@ -41,6 +41,10 @@ h3 {
     font-size: 1.7rem;
 }
 
+.messages {
+    width: 100% !important;
+    text-align: justify !important;
+}
 
 /* Style for index.html */
 
@@ -180,6 +184,16 @@ h3 {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Admin bookings list */
+.confirm {
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 30px;
+    background-color: #fff;
+}
 
 /* Media queries for small screens */
 @media screen and (max-width: 992px) {
@@ -207,6 +221,12 @@ h3 {
 
     #mainNav {
         display: none;
+    }
+    .card{
+        width: 100%;
+    }
+    .button{
+        width: 100%;
     }
 
 }

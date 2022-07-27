@@ -7,6 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Booking website for The Early Birdie breakfast restaurant">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Raleway:wght@100&display=swap"
@@ -39,6 +40,9 @@
                     <li class="nav-item"><a class="nav-link text-white" href="{% url 'menu' %}">Menu</a></li>
 
                     {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'bookings' %}">My Bookings</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{% url 'account_logout' %}">Logout</a>
                     </li>
@@ -85,6 +89,23 @@
             </ul>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md2">
+                {% for message in messages %}
+                {% if message %}
+                <div class="alert alert {{ message.tags }} alert-dismissable fade show" id="msg" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
 
 
 

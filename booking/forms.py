@@ -32,7 +32,7 @@ class BookingForm(forms.ModelForm):
         ]
 
         help_texts = {
-            'booked_time': 'Please input time between 6AM-11AM',
+            'booked_time': 'Please input time between 6am-11am',
         }
         widgets = {
             'booked_date': forms.DateInput(

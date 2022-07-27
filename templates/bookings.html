@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for message in messages %}
-{% if message %}
-<div class="alert alert-{{ message.tags }}" role="alert">
-    {{ message }}
-</div>
-
-{% endif %}
-{% endfor %}
 
 {% if user.is_authenticated and user.is_staff and user.is_superuser %}
 <div>
@@ -35,9 +27,9 @@
                     <form class="d-inline" action="{% url 'confirmation' booking.slug %}" method="POST">
                         {% csrf_token %}
                         {% if booking.approved %}
-                             <button type="submit" value="{{ booking.slug }}" class="btn"><i class="fas fa-check-circle"></i></button>
+                             <button type="submit" value="{{ booking.slug }}" class="btn confirm"><i class="fas fa-check-circle"></i></button>
                         {% else %}
-                            <button type="submit" value="{{ booking.slug }}" class="btn"><i class="fas fa-times-circle"></i></button>
+                            <button type="submit" value="{{ booking.slug }}" class="btn confirm"><i class="fas fa-times-circle"></i></button>
                         {% endif %}
                     </form>
                     

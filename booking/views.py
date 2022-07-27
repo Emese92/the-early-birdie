@@ -30,7 +30,7 @@ class AddBooking(TemplateView):
     
     def get(self, request, *args, **kwargs):
         form = BookingForm()
-        context = {"form": form, "booked": False, "confirmed": False, "deleted": False, }
+        context = {"form": form,}
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
@@ -39,8 +39,9 @@ class AddBooking(TemplateView):
         if form.is_valid():
             form.instance.account = request.user
             form.save()
-        
-        context = {"form": form, "booked": True, "confirmed": False, "deleted": False,}
+            messages.info(request, "Your booking is awaiting approval")
+            return redirect('/bookings')
+        context = {"form": form,}
         return render(request, self.template_name, context)
 
 
@@ -53,9 +54,9 @@ def editBooking(request, pk=None):
         form.instance.account = request.user
         form.save()
         messages.success(request, "Booking updated") 
-        return redirect('bookings')
+        return redirect('/bookings')
 
-    context = {"form": form, "booked": True, "confirmed": False, "deleted": False,}
+    context = {"form": form,}
     template = 'edit_booking.html'
     return render(request, template, context)
 
@@ -66,8 +67,8 @@ def deleteBooking(request, pk):
     booking = Booking.objects.get(pk=pk)
     if request.method == 'POST':
         booking.delete()
+        messages.success(request, "Booking deleted") 
         return redirect('/bookings')
-        messages.success(request, "Your booking has been deleted")
     return render(request, "delete.html")
 
 
@@ -78,6 +79,7 @@ class Confirmation(View):
         if request.method == 'POST':
             booking.approved = not booking.approved
             booking.save()
+            messages.success(request, "Booking confrimed")
             return redirect('/bookings')
-
+            
         return render(request,'bookings.html')

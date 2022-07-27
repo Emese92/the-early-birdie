@@ -4,12 +4,6 @@
 
 {% load crispy_forms_tags %}
 {% if user.is_authenticated %}
-{% if booked %}
-
-<div class="alert alert-success" role="alert">
-    Your booking is awaiting approval
-</div>
-{% endif %}
 
 <div class="card mb-3">
     <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
