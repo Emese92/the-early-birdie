@@ -29,7 +29,7 @@
                         {% if booking.approved %}
                              <button type="submit" value="{{ booking.slug }}" class="btn confirm"><i class="fas fa-check-circle"></i></button>
                         {% else %}
-                            <button type="submit" value="{{ booking.slug }}" class="btn confirm"><i class="fas fa-times-circle"></i></button>
+                            <button type="submit" value="{{ booking.slug }}" class="btn confirm"><i class="far fa-circle"></i></button>
                         {% endif %}
                     </form>
                     
@@ -81,9 +81,9 @@
                 <td>{{ booking.party_size }}</td>
                 <td>
                     {% if booking.approved == True %}
-                    <span><i class="fas fa-check-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
+                    <span><i class="fas fa-check-circle" style="font-size:30px;color:rgb(20, 151, 3)"></i></span>
                     {% else %}
-                    <span><i class="fas fa-times-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
+                    <span><i class="far fa-circle" style="font-size:30px;color:rgb(20, 151, 3)"></i></span>
                     {% endif %}
                 </td>
             </tr>
