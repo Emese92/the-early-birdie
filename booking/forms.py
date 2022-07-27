@@ -30,11 +30,15 @@ class BookingForm(forms.ModelForm):
             'party_size',
             'extra_info',
         ]
+
+        help_texts = {
+            'booked_time': 'Please input time between 6AM-11AM',
+        }
         widgets = {
             'booked_date': forms.DateInput(
-                format=("%d-%m-%Y"),
+                format=("%Y-%m-%d"),
                 attrs={'type': 'date'}),
-            'booked_time': forms.TimeInput(attrs={'type': 'time'}),
+            'booked_time': forms.TimeInput(attrs={'type': 'time', 'min': '06:00', 'max': '11:00'}),
             'party_size': forms.Select(choices=PARTY_SIZE),
             'extra_info': forms.widgets.Textarea(
                 attrs={"placeholder": "Food allergies, dietary requirements, special occasions...", })

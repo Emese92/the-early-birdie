@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from django.views.generic.edit import CreateView, FormView, UpdateView, DeleteView
@@ -23,7 +23,6 @@ class BookingList(generic.ListView):
     Booking.objects.values()
 
 
-
 class AddBooking(TemplateView):
     model = Booking
     form = BookingForm()
@@ -46,7 +45,7 @@ class AddBooking(TemplateView):
 
 
 def editBooking(request, pk=None):
-    booking = get_object_or_404(Booking, pk = pk)
+    booking = get_object_or_404(Booking, pk=pk)
     form = BookingForm(request.POST or None, request.FILES or None, instance=booking)
     if form.is_valid():
         instance = form.save(commit=False)
@@ -68,6 +67,17 @@ def deleteBooking(request, pk):
     if request.method == 'POST':
         booking.delete()
         return redirect('/bookings')
-        messages.success(request, 'Your booking has been deleted')
+        messages.success(request, "Your booking has been deleted")
     return render(request, "delete.html")
 
+
+class Confirmation(View):
+
+    def post(self, request, slug, *args, **kwargs):
+        booking = Booking.objects.get(slug=slug)
+        if request.method == 'POST':
+            booking.approved = not booking.approved
+            booking.save()
+            return redirect('/bookings')
+
+        return render(request,'bookings.html')

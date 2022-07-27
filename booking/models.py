@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
 import datetime as dt
+import uuid
 
 
 class Booking(models.Model):
@@ -22,7 +23,6 @@ class Booking(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):  # new
-        if not self.slug:
-            self.slug = slugify(self.name)
+        self.slug = uuid.uuid4()
         return super().save(*args, **kwargs)
 

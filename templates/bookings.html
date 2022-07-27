@@ -32,12 +32,18 @@
                 <td>{{ booking.booked_time }}</td>
                 <td>{{ booking.party_size }}</td>
                 <td>
-                    {% if booking.approved == True %}
-                    <span><i class="fas fa-check-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
-                    {% else %}
-                    <span><i class="fas fa-times-circle" style="font-size:30px;color:rgb(65, 65, 65)"></i></span>
-                    {% endif %}
+                    <form class="d-inline" action="{% url 'confirmation' booking.slug %}" method="POST">
+                        {% csrf_token %}
+                        {% if booking.approved %}
+                             <button type="submit" value="{{ booking.slug }}" class="btn"><i class="fas fa-check-circle"></i></button>
+                        {% else %}
+                            <button type="submit" value="{{ booking.slug }}" class="btn"><i class="fas fa-times-circle"></i></button>
+                        {% endif %}
+                    </form>
+                    
+                    
                 </td>
+                
             </tr>
             <tr id="hidden_row_-{{ forloop.counter }}" class="hidden_row">
                 <td>Booked on date: {{ booking.booked_on }}</td>
