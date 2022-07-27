@@ -45,7 +45,7 @@
                 <td>Booked on date: {{ booking.booked_on }}</td>
                 <td>Account: {{ booking.account }}</td>
                 <td>Extra info: {{ booking.extra_info }}</td>
-                <td><a class="btn btn-dark d-inline-block mx-auto p-2" role="button" href="#">Edit</a></td>
+                <td><a class="btn btn-dark d-inline-block mx-auto p-2" role="button" href="{% url 'edit' booking.pk %}">Edit</a></td>
                 <td><a class="btn btn-dark d-inline-block mx-auto p-2" role="button" href="{% url 'delete' booking.pk %}">Delete</a></td>
             </tr>
 
