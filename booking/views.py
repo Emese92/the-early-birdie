@@ -8,6 +8,7 @@ from .forms import BookingForm
 from django.contrib import messages
 
 
+
 class HomeTemplateView(TemplateView):
     template_name = 'index.html'
 
