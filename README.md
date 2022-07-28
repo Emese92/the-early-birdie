@@ -57,11 +57,12 @@ The main page include a nice big picture positioned to the right and the welcome
 
 The menu is quite simple. It is a list of items with the prices on the right. It has a double border.
 
-![Index](/workspace/the-early-birdie/static/images/menu.png)
+![Index](static/images/menu.png)
 
 ### Login, Register, Logout:
 
-The authentication pages have the same CSS and layout. All three have nice colorful pictures, forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
+The authentication pages have the same CSS and layout. All three have nice colorful pictures, forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) and [box shadow](https://getcssscan.com/css-box-shadow-examples).
+Messages appear if register, logged in or out, made, delete or edit a booking.
 
 ![Login](/workspace/the-early-birdie/static/images/login.png)
 ![Register](/workspace/the-early-birdie/static/images/register.png)
@@ -69,9 +70,25 @@ The authentication pages have the same CSS and layout. All three have nice color
 
 ### My Bookings:
 
-The My bookings page is a list of bokings, that has been made by the User. It includes: name, date, time, party size, and if the booking is confirmed or not by the Admin. The row are clickable, they open up a new row which include the date when the booking was made, the account name and the extra infos. It also reveals
+The My bookings page is a list of bokings, that has been made by the User. It includes: name, date, time, party size, and if the booking is confirmed or not by the Admin. The row are clickable, they open up a new row which include the date when the booking was made, the account name and the extra infos. It also reveals the edit and delete buttons.
+On the bottom of the list is a Book a table button that takes the user to the add_new_booking page.
 
-![]()
+When it is the Admin that looks at this page they see the bookings made by all the Users. The layout is the same. The Edit and Delete and Book a table options are also present. The confirmed logo is a button here, that toggles to confirmed and nor confirmed it pressed. 
+
+#### Edit Booking, Add a New Booking
+
+These are sisters. They look the same apart from the button and the Edit Booking has a prefilled form with the current booking information.
+Forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
+The forms includes: Booked date (mandatory), Booked time (mandatory, input must be between 6 to 11), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
+
+![New Booking](/workspace/the-early-birdie/static/images/new-booking.png)
+
+#### Delete Booking
+
+Same too the previous two in style and picture. It has only two buttons on to confirm bookng deletion or to go back to the My bookings page.
+
+![Delete Booking](/workspace/the-early-birdie/static/images/delete.png)
+
 ### Design / Colour Scheme
 
 The design of this website has a simple color scheme. Mostly black and white or gray that contrasts each other and makes the colorful pictures pop. 
@@ -84,7 +101,7 @@ The menu is nice and simple just with a little boarding.
 
 The My Bookings page is a just a list of bookings, with a green confirmation logo. It has an empty circle when it is not confirmed and a full green tick when it it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
 
-The authorization pages all have similar design with different pictures, so does the add a new booking form. The form uses crispy forms.
+The account pages all have similar design with different pictures, so does the add a new booking form. The forms use crispy forms.
 
 
  
@@ -111,23 +128,30 @@ Pictures are from [Pexels](https://www.pexels.com/sv-se/).
    - JavaScript
    - Django 3.8
 
-  ### Libraries & Programs Used
+  ### Libraries, Websites & Programs Used
   * [Font Awesome](https://fontawesome.com/)
   * [Google Fonts](https://fonts.google.com/)
-  * [CSS Formatter](https://webformatter.com/css) was used to clean up the code.
   * [Gitpod](https://gitpod.io/projects)
   * Paint
   * [Jsfiddle](https://jsfiddle.net/)
   * [CSS Scan](https://getcssscan.com/css-box-shadow-examples)
-  * cloudinary
-  * heroku
-  * psycopg2
-  * bootstrap
-  * crispy-forms
-  * allauth
+  * [cloudinary](https://cloudinary.com/)
+  * [heroku](https://dashboard.heroku.com/apps)
+  * [psycopg2](https://pypi.org/project/psycopg2/)
+  * [Bootstrap5](https://bootstrap-vue.org/docs)
+  * [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/)
+  * [AllAuth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 ## Testing
+I have only done manual testings with django.
+### Forms has been tested:
+  - Without content
+  - Filled out with wrong content
+  - Testing all the buttons 
+
 I have tested the website on multiple devices (phone, laptop, desktop).
+
+
 
 
 ### Validator testing
@@ -145,7 +169,7 @@ No errors are reported on any of the pages [Wave]()
 
 
 ### Lighthouse Test
-I ran lighthouse tests for desktop on both pages:
+I ran lighthouse tests for desktop on:
 
 ![Index]()
 
