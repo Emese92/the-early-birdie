@@ -75,7 +75,6 @@ class Confirmation(View):
         if request.method == 'POST':
             booking.approved = not booking.approved
             booking.save()
-            messages.success(request, "Booking confrimed")
             return redirect('/bookings')
 
         return render(request, 'bookings.html')
