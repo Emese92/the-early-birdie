@@ -98,6 +98,10 @@ h3 {
     transition: background-color 0.15s ease-in-out;
 }
 
+iframe {
+    width: 100%;
+    height: 400;
+}
 
 /* Style for menu.html  */
 .ml-auto {

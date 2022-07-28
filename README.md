@@ -51,7 +51,7 @@ Included on all the pages.
 
 The main page include a nice big picture positioned to the right and the welcome message on the left overlapping and transparent. It has a button sending the user to the login page/booking form(if authenticated). On the bottom a map is included pointing to the location where it can be found (Its just pointing to central London at the moment).
 
-![Index](/workspace/the-early-birdie/static/images/index-page.png)
+![Index](static/images/index-page.png)
 
 ### Menu:
 
@@ -62,11 +62,11 @@ The menu is quite simple. It is a list of items with the prices on the right. It
 ### Login, Register, Logout:
 
 The authentication pages have the same CSS and layout. All three have nice colorful pictures, forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) and [box shadow](https://getcssscan.com/css-box-shadow-examples).
-Messages appear if register, logged in or out, made, delete or edit a booking.
+Messages appear if register, logged in or out, made, delete or edit a booking with a possibility to close it or dissapear automatically.
 
-![Login](/workspace/the-early-birdie/static/images/login.png)
-![Register](/workspace/the-early-birdie/static/images/register.png)
-![Logout](/workspace/the-early-birdie/static/images/logout.png)
+![Login](static/images/login.png)
+![Register](static/images/register.png)
+![Logout](static/images/logout.png)
 
 ### My Bookings:
 
@@ -81,13 +81,13 @@ These are sisters. They look the same apart from the button and the Edit Booking
 Forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
 The forms includes: Booked date (mandatory), Booked time (mandatory, input must be between 6 to 11), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
 
-![New Booking](/workspace/the-early-birdie/static/images/new-booking.png)
+![New Booking](static/images/new-booking.png)
 
 #### Delete Booking
 
 Same too the previous two in style and picture. It has only two buttons on to confirm bookng deletion or to go back to the My bookings page.
 
-![Delete Booking](/workspace/the-early-birdie/static/images/delete.png)
+![Delete Booking](static/images/delete.png)
 
 ### Design / Colour Scheme
 
@@ -144,24 +144,49 @@ Pictures are from [Pexels](https://www.pexels.com/sv-se/).
 
 ## Testing
 I have only done manual testings with django.
-### Forms has been tested:
-  - Without content
-  - Filled out with wrong content
-  - Testing all the buttons 
+### Forms tests:
+  - All mandatory fields are validated and indicated with an asterisk (*) symbol 
+  - Validation error messages appear correctly at the right place
+  - Dates are in the correct format
+  - Helper text is visible and understandable
+  - Dropdown select has a min and max value
+  - Non mandatory field has a placeholder with a clear explanation
+  - Delete functionality asks for confirmation
+  - Field labels are correct
+  - Check the functionality of buttons available on all pages.
+  - Check the text on all pages for spelling and grammatical errors
+  - The user is not be able to submit a page twice by pressing the submit button quickly.
+  - Success and info messages appear correctly with the right color.
+  - Validated all web pages (validate HTML and CSS for syntax errors)
 
-I have tested the website on multiple devices (phone, laptop, desktop).
+### Database tests:
+  - Checked if the correct data is getting saved in the database upon a successful page submit
+  - Checked for data integrity. Data is stored in tables.
+  - Table columns have description information available
+
+### Performance
+  - Loading time is accaptable
+  
+
+
+I have tested the website on multiple devices (phone, laptop and desktop).
 
 
 
 
 ### Validator testing
-CSS: No errors were found when passing through the official Jigsaw validator
-[Jigsaw](https://jigsaw.w3.org/css-validator/validator)
+
+CSS: No errors were found when passing through the Jigsaw validator
+
+[Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+
+[Css-test](static/images/css-validator.png)
 
 ### JSHint
-There was no problem detected on [JSHint](https://jshint.com/)
 
+JavaScript has been tested with [JSHint](https://jshint.com/). No Error found.
 
+[JSHint](static/images/jshint.png)
 
 ### Wave Test
 No errors are reported on any of the pages [Wave]()
@@ -175,16 +200,17 @@ I ran lighthouse tests for desktop on:
 
 ![Bookings]()
 
-### Validator testing
-CSS: No errors were found when passing through the official Jigsaw  validator (warnings exist from font awsome):
-- [Index]()
-- [Menu]()
-
-
 
 
 HTML: No errors were returned when passing through the official W3C validator:
-- []()
+- [Index]()
+- [Menu](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fmenu%2F)
+- [Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fbookings%2F) - on Admin page
+- [Edit Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fedit_booking%2F48%2F)
+- [Delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fdelete_booking%2F48%2F)
+- [Add Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fadd_new_booking%2F)
+- [Signup](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Fsignup%2F)
+- [Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Flogin%2F)
 - []()
 
 ![W3c]()
@@ -233,4 +259,5 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 - https://thetldr.tech/how-to-fix-any-django-migration-issue-in-local/
 - https://realpython.com/django-social-forms-4/
 - https://mdbootstrap.com/docs/standard/extended/login/
+- https://www.softwaretestinghelp.com/sample-test-cases-testing-web-desktop-applications/
 - Thank you for my mentor in reviewing and helping with the code.
