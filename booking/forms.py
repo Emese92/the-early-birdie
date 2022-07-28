@@ -1,8 +1,8 @@
 from .models import Booking
 from django import forms
-import datetime as dt
 
 PARTY_SIZE = [(i, i) for i in range(1, 11)]
+
 
 class BookingForm(forms.ModelForm):
 
@@ -28,4 +28,3 @@ class BookingForm(forms.ModelForm):
             'extra_info': forms.widgets.Textarea(
                 attrs={"placeholder": "Food allergies, dietary requirements, special occasions...", })
         }
-
