@@ -1,108 +1,170 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Early Birdie
 
-Welcome Emese92,
+This website is for a breakfast restaurant. It has a simple contrast with the black and white colors and nice, colorful pictures. The user has the possibility to create an account where they can make and view their bookings for the restaurant. It is also possible to delete or edit their bookings. When the admin has confirmed their booking it is visible on their bookings too.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Live link: https://the-early-birdie.herokuapp.com/
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+(To open links in a new tab, hold 'Ctrl' (or '⌘' on Apple devices) as you click!)
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+## Visitor Goals
 
-Another blue button should appear to click: _Open Browser_.
+* Easily understandable, clear and quick to use
+* Be able see the menu, opening times and map/location.
+* Be able to create, read, update, and delete bookings.
+* See if their booking hs been confirmed or not
+* Have access to social media websites
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Owners Goals
+* To promote the restaurant
+* Increase bookings
+* Encourage people to share their experience
+* Be able to create, read, update, and delete bookings.
+* Be able to confirm bookings.
 
-A blue button should appear to click: _Make Public_,
+## Features
 
-Another blue button should appear to click: _Open Browser_.
+### Main page:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+![]()
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Menu:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
+![]()
+### Design / Colour Scheme
 
-## Release History
+The design of this website has a simple color scheme. Mostly black and white or gray that contrasts each other and makes the colorful pictures pop. 
+It has different pictures of delicious breakfast dishes on many pages. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The landing page has a nice eye catching picture with a welcome message. Next to the navigation bar there is the logo of a bird mathing for the name of the restaurant.
+The main page also has a full width map, just above the social media links.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+The menu is nice and simple just with a little boarding.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+The My Bookingd page is a just a list of bookings, with a colorful confirmatin logo. It has an empty circle when it is not confirmed and a full green tick when it it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The authorization pages all have similar design with different pictures, so does the add a new booking form. The form uses crispy forms.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+ 
+![]()
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+#### Typography
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+[Google Fonts](https://fonts.google.com/): Raleway and Lora with a fallback of sans-serif
+ 
+#### Imagery
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The icons I used are from [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid).
+Pictures are from [Pexels](https://www.pexels.com/sv-se/).
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## Technologies
+ * [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid)
+ * [Google Fonts](https://fonts.google.com/)
+ * [CSS Formatter](https://webformatter.com/css) was used to clean up the code.
+ * [Gitpod](https://gitpod.io/projects)
+ * Paint
+ * [Jsfiddle](https://jsfiddle.net/)
+ * [CSS Scan](https://getcssscan.com/css-box-shadow-examples)
+ * cloudinary
+ * heroku
+ * psycopg2
+ * bootstrap 
+ * bootstrap studio
+ * crispy-forms
+ * allauth
 
-------
+ ### Languages
+   - CSS3
+   - HTML5
+   - JavaScript
+   - Django 3.8
 
-## FAQ about the uptime script
+## Testing
+I have tested the website on multiple devices (phone, laptop, desktop) and web browsers(Microsoft Edge, Google Chrome, Internet Explorer).
 
-**Why have you added this script?**
+### JSHint
+There was no problem detected on [JSHint](https://jshint.com/)
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+### Wave Test
+No errors are reported on any of the pages [Wave]()
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Lighthouse Test
+I ran lighthouse tests for desktop on both pages:
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![Index]()
 
-**Can I opt out?**
+![Bookings]()
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Validator testing
+CSS: No errors were found when passing through the official Jigsaw  validator (warnings exist from font awsome):
+- [Index]()
+- [Menu]()
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+HTML: No errors were returned when passing through the official W3C validator:
+- []()
+- []()
 
-Happy coding!
+![W3c]()
+
+### Bugs
+
+
+
+
+## Deployment
+This project was deployed using Code Institute's mock terminal for Heroku.
+
+ - Steps for deployment:
+   - Login on the Heroku website
+   - Click on New, then Create new app
+   - In the Settings, set the Config Vars.
+   - In the Deploy tab connect your Github
+   - Scroll to Manual deploy and click on Deploy Branch
+
+
+ ### Forking
+ * If you wish to fork the repository:
+    - GitHub Search my username and repository
+    - Select the repository
+    - Click the fork icon in the top right
+    - This creates a fork within your GitHub repositories
+    - Edit the files as necessary to your remote repository
+
+
+## Credits
+- I Think Therefore I Blog and Hello Django project
+- [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid)
+- [W3School](https://www.w3schools.com/css/default.asp)
+    - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
+- [Stack Owerflow](https://stackoverflow.com/)
+    - https://stackoverflow.com/questions/60603692/generate-unique-id-in-each-loop-of-for-loop-django-template
+    - https://stackoverflow.com/questions/6301741/django-integerfield-with-choice-options-how-to-create-0-10-integer-options
+    - https://stackoverflow.com/questions/49141414/editing-a-slug-post-in-django
+    - https://stackoverflow.com/questions/42089277/how-to-modify-a-boolean-field-model-in-django
+- https://www.youtube.com/watch?v=Ll59LAOHdXc&list=PLInvlTu9nmo8ttdXgiD4S7sHiHL2iRVY5&index=19
+- [Pexels](https://www.pexels.com/sv-se/)
+- [CSS Scan](https://getcssscan.com/css-box-shadow-examples)
+- https://www.geeksforgeeks.org/how-to-make-html-table-expand-on-click-using-javascript/?fbclid=IwAR1hVkf9KzZjewn6agXULtWcXnuknO4pAtlW11MqNG2FVz4O6JVx_SdzHvA
+- https://www.fullstackpython.com/django-shortcuts-render-examples.html
+- https://learndjango.com/tutorials/django-slug-tutorial
+- https://thetldr.tech/how-to-fix-any-django-migration-issue-in-local/
+- https://realpython.com/django-social-forms-4/
+- Thank you for my mentor in reviewing and helping with the code.

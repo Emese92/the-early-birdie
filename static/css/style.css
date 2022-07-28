@@ -19,14 +19,17 @@ h3 {
     font-size: 2.5rem;
     font-weight: 500;
 }
-.link-social{
+
+.link-social {
     text-decoration: none;
-    color:#fff;
+    color: #fff;
 }
-.link-social:hover{
-    color:#fff;
+
+.link-social:hover {
+    color: #fff;
 
 }
+
 .mobile-container {
     display: none;
 
@@ -46,11 +49,6 @@ h3 {
 
 .footer {
     font-size: 1.7rem;
-}
-
-.messages {
-    width: 100% !important;
-    text-align: justify !important;
 }
 
 /* Style for index.html */
@@ -167,15 +165,20 @@ h3 {
     align-items: center;
     width: 300px;
 }
-.confirm{
+
+.confirm {
     color: rgb(20, 151, 3);
 }
-.notconfirm{
+
+.notconfirm {
     color: rgb(20, 151, 3);
+}
+
+.tbl {
+    padding-bottom: 10px;
 }
 
 /* Authentication styles */
-
 
 .link {
     text-decoration: underline;
@@ -224,6 +227,18 @@ h3 {
         right: auto;
     }
 
+    .small-pics {
+        display: none;
+    }
+
+
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -234,11 +249,25 @@ h3 {
     #mainNav {
         display: none;
     }
-    .card{
-        width: 100%;
-    }
-    .button{
+
+    .button {
         width: 100%;
     }
 
+    .card-body {
+        width: 100%;
+    }
+
+    form {
+        width: 100% !important;
+        padding-left: none !important;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+    .container {
+        padding-bottom: 10px;
+    }
 }
