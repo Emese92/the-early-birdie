@@ -25,15 +25,51 @@ Live link: https://the-early-birdie.herokuapp.com/
 * Be able to create, read, update, and delete bookings.
 * Be able to confirm bookings.
 
+## User Stories
+- As a Site User I can choose from available times and dates for a booking so that is reserved for when I need it to be
+- As a Site User I can request a booking so that reservation is progressed
+- As a Site User I can create, read, update and delete bookings so that I can manage my reservation
+- As a Site Admin I canapprove or disapprove bookings so that I can manage availability
+- As a Site User I can receive confirmation about my booking so that I am assured it has been approved
+- As a Site Admin I can view bookings so that I can read all the details
+
+
 ## Features
 
-### Main page:
+### Navbar:
 
+The navigation has a bird logo and the name of the Restaurant, which is also a button that brings the User back to the main page. On the right hand side it has the navigation buttons for Home, Menu, Register, and Login. This changes if a User is authenticated. The My bokings and Logout appears insted of Register and Login.
+On small screens The User can toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon.
+Included on all the pages.
 
-![]()
+### Footer:
+
+Simple, responsive social media logos from [Font awsome](https://fontawesome.com/). Opens on a new tab.
+Included on all the pages.
+
+### Index page:
+
+The main page include a nice big picture positioned to the right and the welcome message on the left overlapping and transparent. It has a button sending the user to the login page/booking form(if authenticated). On the bottom a map is included pointing to the location where it can be found (Its just pointing to central London at the moment).
+
+![Index](/workspace/the-early-birdie/static/images/index-page.png)
 
 ### Menu:
 
+The menu is quite simple. It is a list of items with the prices on the right. It has a double border.
+
+![Index](/workspace/the-early-birdie/static/images/menu.png)
+
+### Login, Register, Logout:
+
+The authentication pages have the same CSS and layout. All three have nice colorful pictures, forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
+
+![Login](/workspace/the-early-birdie/static/images/login.png)
+![Register](/workspace/the-early-birdie/static/images/register.png)
+![Logout](/workspace/the-early-birdie/static/images/logout.png)
+
+### My Bookings:
+
+The My bookings page is a list of bokings, that has been made by the User. It includes: name, date, time, party size, and if the booking is confirmed or not by the Admin. The row are clickable, they open up a new row which include the date when the booking was made, the account name and the extra infos. It also reveals
 
 ![]()
 ### Design / Colour Scheme
@@ -46,7 +82,7 @@ The main page also has a full width map, just above the social media links.
 
 The menu is nice and simple just with a little boarding.
 
-The My Bookingd page is a just a list of bookings, with a colorful confirmatin logo. It has an empty circle when it is not confirmed and a full green tick when it it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
+The My Bookings page is a just a list of bookings, with a green confirmation logo. It has an empty circle when it is not confirmed and a full green tick when it it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
 
 The authorization pages all have similar design with different pictures, so does the add a new booking form. The form uses crispy forms.
 
@@ -64,34 +100,39 @@ The authorization pages all have similar design with different pictures, so does
  
 #### Imagery
 
-The icons I used are from [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid).
+The icons I used are from [Font Awesome](https://fontawesome.com/).
 Pictures are from [Pexels](https://www.pexels.com/sv-se/).
 
 
 ## Technologies
- * [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid)
- * [Google Fonts](https://fonts.google.com/)
- * [CSS Formatter](https://webformatter.com/css) was used to clean up the code.
- * [Gitpod](https://gitpod.io/projects)
- * Paint
- * [Jsfiddle](https://jsfiddle.net/)
- * [CSS Scan](https://getcssscan.com/css-box-shadow-examples)
- * cloudinary
- * heroku
- * psycopg2
- * bootstrap 
- * bootstrap studio
- * crispy-forms
- * allauth
-
  ### Languages
    - CSS3
    - HTML5
    - JavaScript
    - Django 3.8
 
+  ### Libraries & Programs Used
+  * [Font Awesome](https://fontawesome.com/)
+  * [Google Fonts](https://fonts.google.com/)
+  * [CSS Formatter](https://webformatter.com/css) was used to clean up the code.
+  * [Gitpod](https://gitpod.io/projects)
+  * Paint
+  * [Jsfiddle](https://jsfiddle.net/)
+  * [CSS Scan](https://getcssscan.com/css-box-shadow-examples)
+  * cloudinary
+  * heroku
+  * psycopg2
+  * bootstrap
+  * crispy-forms
+  * allauth
+
 ## Testing
-I have tested the website on multiple devices (phone, laptop, desktop) and web browsers(Microsoft Edge, Google Chrome, Internet Explorer).
+I have tested the website on multiple devices (phone, laptop, desktop).
+
+
+### Validator testing
+CSS: No errors were found when passing through the official Jigsaw validator
+[Jigsaw](https://jigsaw.w3.org/css-validator/validator)
 
 ### JSHint
 There was no problem detected on [JSHint](https://jshint.com/)
@@ -151,7 +192,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 
 ## Credits
 - I Think Therefore I Blog and Hello Django project
-- [Font Awesome](https://fontawesome.com/v5.15/icons/check-circle?style=solid)
+- [Font Awesome](https://fontawesome.com/)
 - [W3School](https://www.w3schools.com/css/default.asp)
     - https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
 - [Stack Owerflow](https://stackoverflow.com/)
@@ -167,4 +208,5 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 - https://learndjango.com/tutorials/django-slug-tutorial
 - https://thetldr.tech/how-to-fix-any-django-migration-issue-in-local/
 - https://realpython.com/django-social-forms-4/
+- https://mdbootstrap.com/docs/standard/extended/login/
 - Thank you for my mentor in reviewing and helping with the code.

@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html class="h-100">
+<html lang="en" class="h-100">
 
 <head>
 
@@ -20,7 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="{% static 'script/script.js' %}"></script>
+    <script src="{% static 'script/script.js' %}"></script>
     <title>The Early Birdie</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
@@ -105,21 +105,22 @@
         </div>
     </div>
 
-
-
-
-
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
-    </main>
+
 
     <!-- Footer -->
     <footer class="footer mt-auto py-1.5 bg-dark">
-        <p class="m-0 text-center text-white"><a class="link-social" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i class="fab fa-facebook"></i></a>
-            <a class="link-social" href="https://twitter.com" target="_blank" rel="noopener" aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter m-3"></i></a>
-            <a class="link-social" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram m-3"></i></a>
-            <a class="link-social" href="https://youtube.com" target="_blank" rel="noopener" aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube m-3"></i></a>
+        <p class="m-0 text-center text-white"><a class="link-social" href="https://facebook.com" target="_blank"
+                rel="noopener" aria-label="Visit our Facebook page (opens in a new tab)"><i
+                    class="fab fa-facebook"></i></a>
+            <a class="link-social" href="https://twitter.com" target="_blank" rel="noopener"
+                aria-label="Visit our Twitter page (opens in a new tab)"><i class="fab fa-twitter m-3"></i></a>
+            <a class="link-social" href="https://instagram.com" target="_blank" rel="noopener"
+                aria-label="Visit our Instagram page (opens in a new tab)"><i class="fab fa-instagram m-3"></i></a>
+            <a class="link-social" href="https://youtube.com" target="_blank" rel="noopener"
+                aria-label="Visit our YouTube page (opens in a new tab)"><i class="fab fa-youtube m-3"></i></a>
     </footer>
 
 </body>

@@ -39,7 +39,7 @@ h3 {
     font-family: Raleway, sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    color: fff;
+    color: #fff;
 }
 
 .nav-link {
@@ -260,7 +260,7 @@ h3 {
 
     form {
         width: 100% !important;
-        padding-left: none !important;
+        padding-left: 0 !important;
     }
 
     .table {
