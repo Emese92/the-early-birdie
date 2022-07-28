@@ -1,21 +1,20 @@
 # The Early Birdie
 
-This website is for a breakfast restaurant. It has a simple contrast with the black and white colors and nice, colorful pictures. The user has the possibility to create an account where they can make and view their bookings for the restaurant. It is also possible to delete or edit their bookings. When the admin has confirmed their booking it is visible on their bookings too.
+This website is for a breakfast restaurant. It has a simple contrast with the black and white colors and nice, colorful pictures. The user can create an account where they can make and view their bookings for the restaurant. It is also possible to delete or edit their bookings. When the admin has confirmed their booking it is visible on their bookings too.
 
 Live link: https://the-early-birdie.herokuapp.com/
 
 (To open links in a new tab, hold 'Ctrl' (or '⌘' on Apple devices) as you click!)
 
 
-
-## User Experience (UX)
+# User Experience (UX)
 
 ## Visitor Goals
 
-* Easily understandable, clear and quick to use
-* Be able see the menu, opening times and map/location.
+* Easily understandable, clear, and quick to use
+* Be able to see the menu, opening times, and map/location.
 * Be able to create, read, update, and delete bookings.
-* See if their booking hs been confirmed or not
+* See if their booking has been confirmed or not
 * Have access to social media websites
 
 ## Owners Goals
@@ -29,7 +28,7 @@ Live link: https://the-early-birdie.herokuapp.com/
 - As a Site User I can choose from available times and dates for a booking so that is reserved for when I need it to be
 - As a Site User I can request a booking so that reservation is progressed
 - As a Site User I can create, read, update and delete bookings so that I can manage my reservation
-- As a Site Admin I canapprove or disapprove bookings so that I can manage availability
+- As a Site Admin I can approve or disapprove bookings so that I can manage availability
 - As a Site User I can receive confirmation about my booking so that I am assured it has been approved
 - As a Site Admin I can view bookings so that I can read all the details
 
@@ -38,18 +37,18 @@ Live link: https://the-early-birdie.herokuapp.com/
 
 ### Navbar:
 
-The navigation has a bird logo and the name of the Restaurant, which is also a button that brings the User back to the main page. On the right hand side it has the navigation buttons for Home, Menu, Register, and Login. This changes if a User is authenticated. The My bokings and Logout appears insted of Register and Login.
-On small screens The User can toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon.
+The navigation has a bird logo and the name of the Restaurant, which is also a button that brings the User back to the main page. On the right-hand side, it has the navigation buttons for Home, Menu, Register, and Login. This changes if a User is authenticated. The My bookings and Logout appear instead of Register and Login.
+On small screens, The User can toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu/bar icon.
 Included on all the pages.
 
 ### Footer:
 
-Simple, responsive social media logos from [Font awsome](https://fontawesome.com/). Opens on a new tab.
+Simple, responsive social media logos from [Font Awesome](https://fontawesome.com/). Opens on a new tab.
 Included on all the pages.
 
 ### Index page:
 
-The main page include a nice big picture positioned to the right and the welcome message on the left overlapping and transparent. It has a button sending the user to the login page/booking form(if authenticated). On the bottom a map is included pointing to the location where it can be found (Its just pointing to central London at the moment).
+The main page includes a nice big picture positioned to the right and the welcome message on the left overlapping and transparent. It has a button sending the user to the login page/booking form(if authenticated). On the bottom, a map is included pointing to the location where it can be found (It is just pointing to central London at the moment).
 
 ![Index](static/images/index-page.png)
 
@@ -61,8 +60,8 @@ The menu is quite simple. It is a list of items with the prices on the right. It
 
 ### Login, Register, Logout:
 
-The authentication pages have the same CSS and layout. All three have nice colorful pictures, forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) and [box shadow](https://getcssscan.com/css-box-shadow-examples).
-Messages appear if register, logged in or out, made, delete or edit a booking with a possibility to close it or dissapear automatically.
+The authentication pages have the same CSS and layout. All three have nice colorful pictures, and forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) and [box shadow](https://getcssscan.com/css-box-shadow-examples).
+Messages appear if registered, logged in or out, made, delete, or edit a booking with a possibility to close it or disappear automatically.
 
 ![Login](static/images/login.png)
 ![Register](static/images/register.png)
@@ -70,22 +69,22 @@ Messages appear if register, logged in or out, made, delete or edit a booking wi
 
 ### My Bookings:
 
-The My bookings page is a list of bokings, that has been made by the User. It includes: name, date, time, party size, and if the booking is confirmed or not by the Admin. The row are clickable, they open up a new row which include the date when the booking was made, the account name and the extra infos. It also reveals the edit and delete buttons.
+The My bookings page is a list of bookings, that have been made by the User. It includes name, date, time, party size, and if the booking is confirmed or not by the Admin. The rows are clickable, they open up a new row which includes the date when the booking was made, the account name, and the extra info. It also reveals the edit and deletes buttons.
 On the bottom of the list is a Book a table button that takes the user to the add_new_booking page.
 
-When it is the Admin that looks at this page they see the bookings made by all the Users. The layout is the same. The Edit and Delete and Book a table options are also present. The confirmed logo is a button here, that toggles to confirmed and nor confirmed it pressed. 
+When it is the Admin that looks at this page they see the bookings made by all the Users. The layout is the same. The Edit and Delete and Book A Table options are also present. The confirmed logo is a button here, that toggles to confirmed and nor confirmed it pressed. 
 
 #### Edit Booking, Add a New Booking
 
 These are sisters. They look the same apart from the button and the Edit Booking has a prefilled form with the current booking information.
 Forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
-The forms includes: Booked date (mandatory), Booked time (mandatory, input must be between 6 to 11), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
+The forms include: Booked date (mandatory), Booked time (mandatory, the input must be between 6 to 11), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
 
 ![New Booking](static/images/new-booking.png)
 
 #### Delete Booking
 
-Same too the previous two in style and picture. It has only two buttons on to confirm bookng deletion or to go back to the My bookings page.
+Same to the previous two in style and picture. It has only two buttons to confirm booking deletion or to go back to the My bookings page.
 
 ![Delete Booking](static/images/delete.png)
 
@@ -94,21 +93,14 @@ Same too the previous two in style and picture. It has only two buttons on to co
 The design of this website has a simple color scheme. Mostly black and white or gray that contrasts each other and makes the colorful pictures pop. 
 It has different pictures of delicious breakfast dishes on many pages. 
 
-The landing page has a nice eye catching picture with a welcome message. Next to the navigation bar there is the logo of a bird mathing for the name of the restaurant.
-The main page also has a full width map, just above the social media links.
+The landing page has a nice eye-catching picture with a welcome message. Next to the navigation bar, there is the logo of a bird fitting the name of the restaurant.
+The main page also has a full-width map, just above the social media links.
 
 The menu is nice and simple just with a little boarding.
 
-The My Bookings page is a just a list of bookings, with a green confirmation logo. It has an empty circle when it is not confirmed and a full green tick when it it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
+The My Bookings page is just a list of bookings, with a green confirmation logo. It has an empty circle when it is not confirmed and a full green tick when it is confirmed. The list rows are clickable, and they expand for one more line with extra information and also the edit and delete buttons.
 
-The account pages all have similar design with different pictures, so does the add a new booking form. The forms use crispy forms.
-
-
- 
-![]()
-
-
-
+The account pages all have a similar design with different pictures, and so does the Add A New Booking form. The forms use crispy forms.
 
 
 #### Typography
@@ -143,19 +135,21 @@ Pictures are from [Pexels](https://www.pexels.com/sv-se/).
   * [AllAuth](https://django-allauth.readthedocs.io/en/latest/installation.html)
 
 ## Testing
-I have only done manual testings with django.
+
+I have only done manual testing with Django.
+
 ### Forms tests:
   - All mandatory fields are validated and indicated with an asterisk (*) symbol 
-  - Validation error messages appear correctly at the right place
+  - Validation error messages appear correctly in the right place
   - Dates are in the correct format
   - Helper text is visible and understandable
   - Dropdown select has a min and max value
-  - Non mandatory field has a placeholder with a clear explanation
-  - Delete functionality asks for confirmation
+  - Non-mandatory field has a placeholder with a clear explanation
+  - The delete functionality asks for confirmation
   - Field labels are correct
   - Check the functionality of buttons available on all pages.
   - Check the text on all pages for spelling and grammatical errors
-  - The user is not be able to submit a page twice by pressing the submit button quickly.
+  - The user is not able to submit a page twice by pressing the submit button quickly.
   - Success and info messages appear correctly with the right color.
   - Validated all web pages (validate HTML and CSS for syntax errors)
 
@@ -165,45 +159,24 @@ I have only done manual testings with django.
   - Table columns have description information available
 
 ### Performance
-  - Loading time is accaptable
+  - Loading time is acceptable
   
 
-
-I have tested the website on multiple devices (phone, laptop and desktop).
-
-
+I have tested the website on multiple devices (phone, laptop, and desktop).
 
 
 ### Validator testing
 
-CSS: No errors were found when passing through the Jigsaw validator
+CSS: No errors were found when passing through the [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) validator
 
-[Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)
+)
 
 [Css-test](static/images/css-validator.png)
 
-### JSHint
 
-JavaScript has been tested with [JSHint](https://jshint.com/). No Error found.
+HTML: No errors were returned when passing through the official [W3C](https://validator.w3.org/nu/) validator:
 
-[JSHint](static/images/jshint.png)
-
-### Wave Test
-No errors are reported on any of the pages [Wave]()
-
-
-
-### Lighthouse Test
-I ran lighthouse tests for desktop on:
-
-![Index]()
-
-![Bookings]()
-
-
-
-HTML: No errors were returned when passing through the official W3C validator:
-- [Index]()
+- [Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F)
 - [Menu](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fmenu%2F)
 - [Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fbookings%2F) - on Admin page
 - [Edit Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fedit_booking%2F48%2F)
@@ -211,13 +184,56 @@ HTML: No errors were returned when passing through the official W3C validator:
 - [Add Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fadd_new_booking%2F)
 - [Signup](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Fsignup%2F)
 - [Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Flogin%2F)
-- []()
+- [Logout](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Flogout%2F)
 
-![W3c]()
+
+### JSHint
+
+JavaScript has been tested with [JSHint](https://jshint.com/). No error was found.
+
+[JSHint](static/images/jshint.png)
+
+### Wave Tests
+The [Wave](https://wave.webaim.org/) test reports an error of an empty link on small screens, which is the hamburger menu/bar icon. The rest of the pages couldn't be tested
+
+- [Index](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/)
+- [Menu](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/menu/)
+- [Bookings](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/bookings/)
+- [Signup](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/accounts/signup/)
+- [Login](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/accounts/login/)
+
+
+### PEP8 Tests
+
+- views.py (Has 2x too long line)
+- urls.py (Has 2x too long line)
+- models.py (Has 1x too long line)
+- forms.py (Has 1x too long line)
+- admin.py (Has 1x too long line)
+
+
+### Lighthouse Test
+
+![Index](static/images/index-lighthouse.png)
+
+![Bookings](static/images/bookings-lighthouse.png)
+
+![Menu](static/images/menu-lighthouse.png)
+
+![Make a booking](static/images/book-lighthouse.png)
 
 ### Bugs
 
+* Confirmation message doesn't send to User. - This bug hasn't been fixed due to lack of time.
+* On the My Bookings lists needs to be clicked twice for the first time on the list items to toggle the open the second line. - This hasn't been fixed due to lack of time.
+* If the admin edits a booking the account name changes so it can't be seen anymore by the User - This hasn't been fixed due to lack of time.
+* On Add a new booking page it is possible to book passed dates - This hasn't been fixed due to lack of time.
+* On the login page the remember me tick doesn't do anything. - This hasn't been fixed due to lack of time.
 
+* On the Add a new booking page, it was possible to all-day times. - This has been fixed with a help-text and min and max value for the booking times.
+* On the Edit booking page, the date was not returned when trying to edit a booking. - This has been fixed by changing the date format.
+* When a booking was made and the page got refreshed the booking went through again creating double bookings. - This has been fixed by redirecting to the My bookings page right after sending the booking.
+* On the login page the remember me tick doesn't do anything. - This hasn't been fixed due to lack of time.
 
 
 ## Deployment
@@ -225,7 +241,7 @@ This project was deployed using Code Institute's mock terminal for Heroku.
 
  - Steps for deployment:
    - Login on the Heroku website
-   - Click on New, then Create new app
+   - Click on New, then Create a new app
    - In the Settings, set the Config Vars.
    - In the Deploy tab connect your Github
    - Scroll to Manual deploy and click on Deploy Branch
