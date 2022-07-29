@@ -26,7 +26,7 @@ Live link: https://the-early-birdie.herokuapp.com/
 
 ## User Stories
 - As a Site User I can choose from available times and dates for a booking so that is reserved for when I need it to be
-- As a Site User I can request a booking so that reservation is progressed
+- As a Site User I can request a booking so that my reservation is progressed
 - As a Site User I can create, read, update and delete bookings so that I can manage my reservation
 - As a Site Admin I can approve or disapprove bookings so that I can manage availability
 - As a Site User I can receive confirmation about my booking so that I am assured it has been approved
@@ -69,16 +69,16 @@ Messages appear if registered, logged in or out, made, delete, or edit a booking
 
 ### My Bookings:
 
-The My bookings page is a list of bookings, that have been made by the User. It includes name, date, time, party size, and if the booking is confirmed or not by the Admin. The rows are clickable, they open up a new row which includes the date when the booking was made, the account name, and the extra info. It also reveals the edit and deletes buttons.
-On the bottom of the list is a Book a table button that takes the user to the add_new_booking page.
+The My bookings page is a list of bookings, that have been made by the User. It includes name, date, time, party size, and if the booking is confirmed or not by the Admin. The rows are clickable, they open up a new row which includes the date when the booking was made, the account name, and the extra info. It also reveals the edit and delete buttons.
+On the bottom of the list is a Book a table button that takes the user to the Add a New Booking page.
 
-When it is the Admin that looks at this page they see the bookings made by all the Users. The layout is the same. The Edit and Delete and Book A Table options are also present. The confirmed logo is a button here, that toggles to confirmed and nor confirmed it pressed. 
+When the Admin looks at this page they see the bookings made by all the Users. The layout is the same. The Edit and Delete and Book A Table options are also present. The confirmed logo is a button here, that toggles to confirm or to remove the confirmation.
 
 #### Edit Booking, Add a New Booking
 
 These are sisters. They look the same apart from the button and the Edit Booking has a prefilled form with the current booking information.
-Forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) a [box shadow](https://getcssscan.com/css-box-shadow-examples).
-The forms include: Booked date (mandatory), Booked time (mandatory, the input must be between 6 to 11), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
+Forms styled with [crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) and [box shadow](https://getcssscan.com/css-box-shadow-examples).
+The forms include: Booked date (mandatory), Booked time (mandatory, the input must be between 6am to 11am), Name (mandatory), Party size (mandatory, has a minimum of 1 and a maximum of 10), Extra info (For food allergies, dietary requirements, special occasions or requirements)
 
 ![New Booking](static/images/new-booking.png)
 
@@ -147,8 +147,8 @@ I have only done manual testing with Django.
   - Non-mandatory field has a placeholder with a clear explanation
   - The delete functionality asks for confirmation
   - Field labels are correct
-  - Check the functionality of buttons available on all pages.
-  - Check the text on all pages for spelling and grammatical errors
+  - Checked the functionality of buttons available on all pages.
+  - Checked the text on all pages for spelling and grammatical errors
   - The user is not able to submit a page twice by pressing the submit button quickly.
   - Success and info messages appear correctly with the right color.
   - Validated all web pages (validate HTML and CSS for syntax errors)
@@ -169,8 +169,6 @@ I have tested the website on multiple devices (phone, laptop, and desktop).
 
 CSS: No errors were found when passing through the [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) validator
 
-)
-
 [Css-test](static/images/css-validator.png)
 
 
@@ -179,8 +177,6 @@ HTML: No errors were returned when passing through the official [W3C](https://va
 - [Index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2F)
 - [Menu](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fmenu%2F)
 - [Bookings](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fbookings%2F) - on Admin page
-- [Edit Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fedit_booking%2F48%2F)
-- [Delete](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fdelete_booking%2F48%2F)
 - [Add Booking](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Fadd_new_booking%2F)
 - [Signup](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Fsignup%2F)
 - [Login](https://validator.w3.org/nu/?doc=https%3A%2F%2Fthe-early-birdie.herokuapp.com%2Faccounts%2Flogin%2F)
@@ -194,7 +190,7 @@ JavaScript has been tested with [JSHint](https://jshint.com/). No error was foun
 [JSHint](static/images/jshint.png)
 
 ### Wave Tests
-The [Wave](https://wave.webaim.org/) test reports an error of an empty link on small screens, which is the hamburger menu/bar icon. The rest of the pages couldn't be tested
+The [Wave](https://wave.webaim.org/) test reports an error of an empty link on small screens, which is the hamburger menu/bar icon.
 
 - [Index](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/)
 - [Menu](https://wave.webaim.org/report#/https://the-early-birdie.herokuapp.com/menu/)
@@ -226,14 +222,12 @@ The [Wave](https://wave.webaim.org/) test reports an error of an empty link on s
 
 * Confirmation message doesn't send to User. - This bug hasn't been fixed due to lack of time.
 * On the My Bookings lists needs to be clicked twice for the first time on the list items to toggle the open the second line. - This hasn't been fixed due to lack of time.
-* If the admin edits a booking the account name changes so it can't be seen anymore by the User - This hasn't been fixed due to lack of time.
+* If the admin edits a User's booking the account name changes so it can't be seen anymore by the User - This hasn't been fixed due to lack of time.
 * On Add a new booking page it is possible to book passed dates - This hasn't been fixed due to lack of time.
-* On the login page the remember me tick doesn't do anything. - This hasn't been fixed due to lack of time.
 
 * On the Add a new booking page, it was possible to all-day times. - This has been fixed with a help-text and min and max value for the booking times.
 * On the Edit booking page, the date was not returned when trying to edit a booking. - This has been fixed by changing the date format.
 * When a booking was made and the page got refreshed the booking went through again creating double bookings. - This has been fixed by redirecting to the My bookings page right after sending the booking.
-* On the login page the remember me tick doesn't do anything. - This hasn't been fixed due to lack of time.
 
 
 ## Deployment
