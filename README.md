@@ -2,7 +2,7 @@
 
 This website is for a breakfast restaurant. It has a simple contrast with the black and white colors and nice, colorful pictures. The user can create an account where they can make and view their bookings for the restaurant. It is also possible to delete or edit their bookings. When the admin has confirmed their booking it is visible on their bookings too.
 
-Live link: https://the-early-birdie.herokuapp.com/
+Live link: https://the-early-birdie.onrender.com
 
 (To open links in a new tab, hold 'Ctrl' (or '⌘' on Apple devices) as you click!)
 
